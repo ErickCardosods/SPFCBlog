@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --cor-fundo-1: white;
+    --cor-fundo-2: black;
+    --cor-titulo-1: linear-gradient(to right, #000000, #3f0808);
+    --cor-titulo-2: linear-gradient(to right, #ffffff, #efc685);
+    --cor-texto-1: black;
+    --cor-texto-2: white;
+    --cor-header-1: linear-gradient(180deg, rgb(186, 32, 32) 0%, rgb(218, 76, 76) 5%, rgb(244, 101, 101) 10%, rgb(255, 157, 157) 15%, rgb(255, 234, 234) 20%, rgb(255, 255, 255) 25%, rgb(223, 223, 223) 30%, rgb(168, 166, 166) 32%, rgb(105, 105, 105) 35%, rgb(45, 45, 45) 40%, rgb(19, 19, 19) 45%, rgb(0, 0, 0) 50%);
+    --botao: rgb(186, 32, 32);
+    --botao-2: rgb(139, 20, 20);
+}
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    background-color: var(--cor-fundo-1);
+}
+header {
+    background-image: var(--cor-header-1);
+}
+section {
+    padding-bottom: 5rem;
+}
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 10px;
+    z-index: 1000; /*Mantem ele fixo num ponto da tela, como se estivesse colado sobre o monitor do dispositivo*/
+}
+.rotacao-circulo{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+.op-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.op-acessibilidade button{
+    margin-bottom: 5px;
+}
+.btn {
+    background-color: var(--botao);
+    border: none;
+}
+.btn:hover {
+    background-color: var(--botao-2);
+    border-color: var(--cor-texto-2);
+}
+.nav-link {
+    color: var(--cor-texto-2);
+    font-weight: 600;
+}
+.nav-link:hover {
+    color: var(--botao);
+}
+.inicio-fundo {
+    background-image: url('img/escudo.jpg');
+    background-size: cover;
+    background-position: right;
+    border-radius: 80px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+}
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 45rem;
+    height: auto;
+}
+h1 {
+    color: var(--cor-texto-1);
+}
+.imagem-dentro {
+    border-radius: 50px;
+}
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.botao-inicio {
+    background-color: var(--botao);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    align-content: center;
+}
+.botao-inicio:hover {
+    background-color: var(--botao-2);
+}
+.display-4 {
+    color: var(--cor-texto-1);
+    background-image: radial-gradient(circle, rgb(71, 8, 8)0%, rgba(71, 8, 8, 0) 100%);
+    padding: 5px;
+}
+#SPFCBlog {
+    position: relative;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: url('img/spfclogo.png') top right no-repeat, url('img/spfclogo.png') bottom left no-repeat;
+    background-size: 680px 680px;
+}
+#SPFCBlog .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.secao-spfc{
+    background-image: url("img/torcida-spfc-2.jpg");
+    background-size: 100%;
+    background-position: 0em;
+    padding: 2em;
+    padding-top: 4em;
+    border-radius: 100px;
+    color: var(--cor-texto-2);
+}
+.p-2 {
+    background-image: linear-gradient(to right, black 0%, rgba(23, 23, 23, 0.6) 60%, rgba(0, 0, 0, 0)100%);
+}
+.p-4 {
+    border-radius: 50px;
+        background-image: radial-gradient(circle, rgb(71, 8, 8)0%, rgba(71, 8, 8, 0.857)50%, rgba(71, 8, 8, 0) 80%);
+}
+h2 {
+    font-family: 'League Spartan';
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--cor-texto-2);
+    background-image: linear-gradient(to right, rgb(71, 8, 8)0%, rgba(71, 8, 8, 0.857)50%, rgba(71, 8, 8, 0.692)75%, rgba(71, 8, 8, 0) 100%);
+    padding-left: .2em;
+    padding-top: 5px;
+    align-items: center;
+}
+#galeria {
+    background-image: linear-gradient(to right, #910d0d, #b8293c, #e64a4a, #ef9d9d, #f1c5c5, #dcc7c7, #cbc0c0, #b9b9b9, #878787, #585858, #2e2e2e, #000000);
+    background-color: rgba(255, 255, 255, 0.318);
+    background-size: 100%;
+    border-radius: 100px;
+}
+.legenda {
+    text-align: center;
+    padding-top: 2em;
+    font-size: 1.3em;
+}
+#contato {
+    background-image: url('img/4965007.jpg');
+    background-size: cover;
+    padding: 4rem 0;
+    /* Espaçamento interno para a seção de contato */
+}
+.formulario {
+    background-color: #ffffff;
+    padding: 2rem;
+    /* Espaçamento interno dentro do formulário */
+    border-radius: 10px;
+    /* Borda arredondada para o formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar o formulário */
+    font-weight: bold;
+}
+.formulario button {
+    background-color: var(--botao);
+    border: none;
+    font-weight: bold;
+}
+.formulario button:hover {
+    background-color: var(--botao-2);
+}
+/* chama classe do bootstrap para modificar a cor */
+.form-control {
+    background-color: #F1EDEF;
+}
