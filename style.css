@@ -4,13 +4,20 @@
 :root {
     --cor-fundo-1: white;
     --cor-fundo-2: black;
+    --cor-fundo-3: linear-gradient(to right, black 0%, rgba(8, 8, 8, 0.6) 60%, rgba(0, 0, 0, 0.5)100%);
     --cor-titulo-1: linear-gradient(to right, #000000, #3f0808);
     --cor-titulo-2: linear-gradient(to right, #ffffff, #efc685);
+    --cor-titulo-3: radial-gradient(circle, #efc685 0%, #f3d5a5b6 25%, rgba(255, 255, 255, 0) 50%);
+    --cor-titulo-4: radial-gradient(circle, #000000a8 0%, #343434b6 25%, rgba(255, 255, 255, 0) 50%);
     --cor-texto-1: black;
     --cor-texto-2: white;
+    --cor-texto-3: gold;
     --cor-header-1: linear-gradient(180deg, rgb(186, 32, 32) 0%, rgb(218, 76, 76) 5%, rgb(244, 101, 101) 10%, rgb(255, 157, 157) 15%, rgb(255, 234, 234) 20%, rgb(255, 255, 255) 25%, rgb(223, 223, 223) 30%, rgb(168, 166, 166) 32%, rgb(105, 105, 105) 35%, rgb(45, 45, 45) 40%, rgb(19, 19, 19) 45%, rgb(0, 0, 0) 50%);
+    --cor-header-2: linear-gradient(90deg, rgb(186, 32, 32) 0%, rgb(218, 76, 76) 8.3%, rgb(244, 101, 101) 16.6%, rgb(255, 157, 157) 24.9%, rgb(255, 234, 234) 33.2%, rgb(255, 255, 255) 41.5%, rgb(223, 223, 223) 49.8%, rgb(168, 166, 166) 58.1%, rgb(105, 105, 105) 66.4%, rgb(45, 45, 45) 74.7%, rgb(19, 19, 19) 83%, rgb(0, 0, 0) 91.3%);
     --botao: rgb(186, 32, 32);
     --botao-2: rgb(139, 20, 20);
+    --botao-contraste: gold;
+    --botao-contraste-2: rgb(216, 184, 0);
 }
 body {
     font-size: 1rem;
@@ -49,6 +56,49 @@ section {
     background-color: var(--botao-2);
     border-color: var(--cor-texto-2);
 }
+
+
+.contraste {
+    background-color: var(--cor-fundo-2);
+}
+.contraste h2, .contraste .p-2 {
+    background-image: var(--cor-fundo-3);
+    color: var(--cor-texto-3);
+}
+.contraste .p-4 {
+    border-radius: 50px;
+        background-image: radial-gradient(circle, rgb(0, 0, 0)0%, rgba(28, 28, 28, 0.857)50%, rgba(71, 8, 8, 0) 80%);
+}
+.contraste body {
+    background-color: var(--cor-fundo-2);
+}
+.contraste .btn {
+    background-color: var(--botao-contraste);
+    color: var(--cor-texto-1);
+}
+.contraste .btn:hover {
+    background-color: var(--botao-contraste-2);
+}
+.contraste header {
+    background-image: var(--cor-header-2);
+}
+.contraste .nav-link:hover {
+    color: var(--cor-texto-3);
+}
+.contraste #contato {
+    background-image: var(--cor-titulo-3);
+    border-radius: 100px;
+    margin-top: 3em;
+    color: var(--cor-texto-2);
+}
+.contraste .formulario {
+    background-color: var(--cor-fundo-2);
+    border-color: var(--cor-texto-3);
+}
+.contraste footer {
+    color: var(--cor-texto-2);
+}
+
 .nav-link {
     color: var(--cor-texto-2);
     font-weight: 600;
@@ -126,6 +176,7 @@ h1 {
     color: var(--cor-texto-2);
 }
 .p-2 {
+    color: var(--cor-texto-2);
     background-image: linear-gradient(to right, black 0%, rgba(23, 23, 23, 0.6) 60%, rgba(0, 0, 0, 0)100%);
 }
 .p-4 {
@@ -154,7 +205,8 @@ h2 {
     font-size: 1.3em;
 }
 #contato {
-    background-image: url('img/4965007.jpg');
+    margin-top: 3em;
+    background-image: var(--cor-titulo-4);
     background-size: cover;
     padding: 4rem 0;
     /* Espaçamento interno para a seção de contato */
@@ -168,6 +220,8 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Sombra suave para destacar o formulário */
     font-weight: bold;
+    border-style: inset;
+    border-color: var(--botao);
 }
 .formulario button {
     background-color: var(--botao);
@@ -180,4 +234,7 @@ h2 {
 /* chama classe do bootstrap para modificar a cor */
 .form-control {
     background-color: #F1EDEF;
+}
+.footer {
+    color: var(--cor-texto-1)
 }
