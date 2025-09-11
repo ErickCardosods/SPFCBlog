@@ -15,3 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
         document.body.classList.toggle('contraste');
     })
 })
+ScrollReveal().reveal('#inicio', {delay: 500})
+ScrollReveal().reveal('#São Paulo Futebol Clube', {delay: 500})
+ScrollReveal().reveal('#galeria', {delay: 500})
+ScrollReveal().reveal('#contato', {delay: 500})
